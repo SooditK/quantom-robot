@@ -96,7 +96,6 @@ const Home: NextPage = () => {
     formdata.append("file", selectedFile as Blob);
     formdata.append("iscreatesearchablepdf", "false");
     formdata.append("issearchablepdfhidetextlayer", "false");
-    console.log({ formdata });
     const res = await axios.post<OCR>(baseurl, formdata, {
       headers: {
         apikey: process.env.NEXT_PUBLIC_OCR_API_KEY,
@@ -181,7 +180,6 @@ const Home: NextPage = () => {
                 className="my-4 w-full"
                 onClick={(e) => {
                   e.preventDefault();
-                  // void onOpenAiCompletion();
                   if (!!selectedFile?.name) {
                     toast.loading("Uploading");
                     void ocrImage();

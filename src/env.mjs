@@ -24,6 +24,7 @@ const server = z.object({
   GITHUB_CLIENT_ID: z.string().min(1),
   GITHUB_CLIENT_SECRET: z.string().min(1),
   OPENAI_SECRET: z.string().min(1),
+  NEXT_PUBLIC_OCR_API_KEY: z.string().min(1),
 });
 
 /**
@@ -54,6 +55,7 @@ const processEnv = {
   GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
   GITHUB_CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET,
   OPENAI_SECRET: process.env.OPENAI_SECRET,
+  NEXT_PUBLIC_OCR_API_KEY: process.env.NEXT_PUBLIC_OCR_API_KEY,
   // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
 };
 
